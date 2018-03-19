@@ -1,0 +1,89 @@
+вывести на консоль буквы английского алфавита от 'A' до 'Z'.
+        for(char i = 'a';i<='z';i++)
+        {
+            System.out.println(i);
+        }
+
+получить сумму чётных элементов челочисленного массива.
+        Random rand = new Random();
+        int N = 10;
+        int A[] = new int[N];
+        for (int i = 0; i < N; i++) {
+            A[i] = rand.nextInt(21) ;
+
+        }
+        int sum = 0;
+        for (int i = 0; i < N; i++) {
+            if (A[i] % 2 == 0) {
+                sum = sum + A[i];
+            }
+        }
+            System.out.println(sum);
+
+    }
+}
+
+написать функцию, которая принимает номер дня недели, а возвращает строку с названием дня недели.
+
+String number(int a) {
+
+        if (a == 1) {
+            String x = "Понидельник";
+            return x;
+        } else if (a == 2) {
+            String x = "Вторник";
+            return x;
+
+        } else if (a == 3) {
+            String x = "Среда";
+            return x;
+        } else if (a == 4) {
+            String x = "Четверг";
+            return x;
+
+        } else if (a == 5) {
+            String x = "Пятьница";
+            return x;
+        } else if (a == 6) {
+            String x = "Субота";
+            return x;
+
+        } else if (a == 7) {
+            String x = "Воскресенье";
+            return x;
+        }
+
+String x = "Такой день отсутствует введите от 1 до 7";
+        return x;
+    }
+}
+
+ отсортировать целочисленный массив.
+
+Ммасив по возрастанию
+Random rand = new Random();
+        final int N = 10;
+        int i, j, c;
+        int a[] = new int[N];
+        for (i = 0; i < N; i++) {
+            a[i] = rand.nextInt(10);
+            System.out.print(a[i] + "\t");
+        }
+
+        for (i = 0; i < N - 1; i++) {
+            for (j = N - 2; j >= i; j--) {
+                if (a[j] > a[j + 1]) {
+
+                    c = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = c;
+                    
+                }
+            }
+        }
+        System.out.println("");
+        for (i = 0; i < N; i++) {
+            System.out.print(a[i] + "\t");
+        }
+    }
+}
